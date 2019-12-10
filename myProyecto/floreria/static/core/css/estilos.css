@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: orange;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+body {
+    background-color:white;
+}
+table {    
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 15px;    margin: 45px;     width: 80%; text-align: left;    border-collapse: collapse;
+}
+
+td { 
+    padding: 8px;     background: pink;     border-bottom: 1px solid #fff;
+    color: #669;    border-top: 1px solid transparent; 
+}
+
+tr:hover td { 
+    background: rgb(245, 147, 163); color: red; 
+}
+
+ol, ul{
+    list-style: none;
+
+}
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+nav img{
+    width: 60px;height: 60px;
+    float: right;
+    margin-right: 50px;
+}
+ nav li{
+    float: left;
+    list-style: none;
+    display: block;
+    background-color:pink;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+}
+nav li a{
+    text-decoration: none;
+}
+nav {
+    background-color:pink;
+    width: 100%;
+    overflow: auto;
+}
+nav li:hover{
+    list-style: none;
+    background-color:rgb(240, 107, 129);
+    text-transform: uppercase;
+    transition: 0.8s;
+}
+.central{
+    margin-top: 50px;
+    text-align: center;
+    background-color: pink;
+    border-radius: 2em;
+    
+}
+section{
+    padding-top: 80px;
+}
+.home {
+    background-color: pink;
+    width: 250px;float: left;border-radius: 2em;
+    padding: 25px;text-align: center;margin: 15px;
+}
+.home img{
+    width: 150px;
+    height: 200px;
+}
+.home p{
+    text-align: justify;
+}
+.cuadro {
+    background-color: pink;
+    width: 250px;float: left;border-radius: 2em;
+    padding: 25px;text-align: center;margin: 15px;
+}
+.cuadro img{
+    width: 150px;
+    height: 200px;
+}
+.cuadro img:hover{
+    filter: brightness(0.6);
+}
+.cuadro p{
+    text-align: justify;
+}
+.cuadro img:hover ~ div{
+    background-color: black;padding: 6px;border-radius: 2em;color: white;
+}
+section h2{
+    text-align: center;margin-bottom: 20px;
+    color:red;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.formulario{
+    text-align: justify;color: bisque;font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* -------- modificacion de los estilos dep. del dispositivo */
+/* media query*/
+@media (max-width:600px){
+    header nav img{
+        display: none;
+    }
+    .cuadro{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10px;
+        background-color:pink;
+        width: 110px;
+        float: left;
+        margin: 5px;
+        border-radius: 10px 0px 10px 0px;
+    }
+    .cuadro img{
+        width: 100px;
+        height: 150px;
+    }
+  
+    .home{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10px;
+        background-color:pink;
+        width: 80%;
+        float: none;
+        margin: 5px;
+        border-radius: 10px 0px 10px 0px;
+    }
+    
+
+    
+}

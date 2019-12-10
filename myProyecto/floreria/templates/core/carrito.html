@@ -1,0 +1,31 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+    Carrito de Compras
+{% endblock titulo %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <h1> Lista de flores</h1>
+    <table border="1">
+        <tr>
+            <td>Nombre</td>
+            <td>Stock</td>
+            <td>Precio</td>
+            
+        </tr>
+        {% for f in lista %}
+        <tr>
+            <td>{{f}}</td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+
+        {% endfor %}
+    </table>
+    
+    
+{% endblock contenido %}

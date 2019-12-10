@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+     Login de Acceso - Petalos
+{% endblock titulo %}
+
+{% block contenido %}
+    <center>
+        
+            <h2>Formulario Login de Acceso</h2>
+    
+            <form name="formulario" method="POST" action="{% url 'LOGIN_INICIAR' %}">
+            {% csrf_token %}
+            
+            
+            <table border="1">
+                <tr>
+                    <td>Usuario:</td>
+                    <td> <input type="text" name="txtUsuario">   </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td> <input type="password" name="txtPass">  </td>
+                </tr>
+                <tr>
+                   <center> <td colspan="2"> <input type="submit" value="Enviar">  </td>  </center>      
+                </tr>
+            </table>
+
+            </form>
+        
+        
+        
+    </center>
+{% endblock contenido %}

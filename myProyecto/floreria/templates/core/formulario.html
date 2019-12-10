@@ -1,0 +1,79 @@
+    {% extends "core/base.html" %}
+
+    {% block titulo %}
+        Formulario - Floreria Petalos
+    {% endblock titulo %}
+
+    {% load static %}    
+
+    {% block contenido %}
+       <div>
+        <form id="formulario" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <center>
+        <h1>Formulario Ingreso Flores</h1>
+        <table>
+           <tr>
+               <td>Nombre:</td>
+               <td>
+                   <input type="text" name="txtNombre">
+               </td>
+           </tr>
+           <tr>
+               <td>Precio:</td>
+               <td>
+                   <input type="number" name="txtPrecio">
+               </td>
+           </tr>
+           <tr>
+               <td>Stock:</td>
+               <td>
+                   <input type="number" name="txtStock">
+               </td>
+           </tr>
+           <tr>
+               <td>Descripcion:</td>
+               <td>
+                   <textarea name="txtDescripcion"></textarea>
+               </td>
+           </tr>
+           <tr>
+               <td>Estado</td>
+               <td>
+                   <select name="txtEstado">
+                        <option>Disponible</option>
+                        <option>No Disponible</option>
+                        
+                   </select>
+               </td>
+           </tr>
+           <tr>
+               <td>Seleccione Imagen:</td>
+               <td>
+                   <input type="file" name="txtImagen">
+               </td>
+           </tr>
+           <tr>
+                <td colspan="2">
+                   <input type="submit" value="Grabar">
+                  
+                </td>
+                
+           </tr>
+        </table>
+        </center>
+        </form>
+        {% if sw %}
+        <script>
+            setTimeout(function(){
+                document.getElementById("mensaje").innerHTML=''
+            },2000)
+        </script>
+        <div id="mensaje">        
+            <b>{{msg}}</b>
+        </div>
+        
+        {% endif %}
+    </div>
+    {% endblock contenido %}
+       
